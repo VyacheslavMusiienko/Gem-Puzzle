@@ -1,0 +1,199 @@
+*,*::before,*::after{
+	margin: 0;
+	padding: 0;
+}
+.controls{text-align: center;}
+.controls button{
+	cursor: pointer;
+	outline: none;	
+	padding: 10px 20px;
+	margin: 5px 2px;
+	border: 0;
+	border-radius: 4px;
+	background: #001F1F;
+	font: bold 14px Arial;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
+	color: #fff;
+}
+.controls button:hover{background: #003333;}
+
+#song{
+  margin-bottom: 0;
+}
+
+#puzzle{
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	border: 8px solid #001F1F;
+	border-radius: 4px;
+}
+#puzzle span{
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+}
+#puzzle span.number{
+	cursor: pointer;
+	/* font: bold 36px/80px Arial; */
+	font: bold 16px/33px Arial;
+	text-align: center;
+	vertical-align: text-top;
+	text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#puzzle span.empty{background: transparent;}
+#puzzle span.number.light{background: #226666;}
+#puzzle span.number.dark{background: #003333;}
+
+#puzzle.animate span{
+	-webkit-transition: 0.15s left, 0.15s top;
+  transition: 0.15s left, 0.15s top;
+}
+
+.time{
+  margin-top: 10px;
+}
+
+#switch-container {
+  margin: 1rem 0;
+}
+
+#sound-off-icon,
+#sound-on-icon {
+  z-index: 0;
+  position: absolute;
+}
+
+#sound-off-icon {
+  top: 9px;
+  right: 7px;
+}
+
+#sound-on-icon {
+  top: .5rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch:before input { 
+  content: "switch";
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:before {
+  content: "input";
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c7c7c7;  /* light gray */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  content: "";
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+/* ====================================== */
+/* lavendar sound making button  */
+/* ====================================== */
+#sound-making-button {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .5rem 2rem;
+  border: none;
+  background-color: #e8cce2;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .4);
+  transition: box-shadow .25s, background-color .25s;
+}
+
+#sound-making-button:hover {
+  cursor: pointer;
+  background-color: #dec5d9;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .5);
+}
+@media (min-width:500px) {
+  #puzzle{
+    transform: scale(1.4) ;
+    transform-origin: center top;
+  }
+}
+@media (min-width:767px) {
+  #puzzle{
+    transform: scale(2.7) ;
+    transform-origin: center top;
+  }
+}
